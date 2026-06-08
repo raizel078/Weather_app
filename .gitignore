@@ -1,0 +1,4 @@
+apicode.py
+__pycache__/
+*.pyc
+.gitignore.txt
