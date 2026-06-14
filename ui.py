@@ -82,6 +82,9 @@ class Mainwindow(QMainWindow):
         self.right_widget.setLayout(self.right_layout)
         self.fetch_weather()
 
+        #now for right, i need to make the JSON and save the searches,
+
+
     def fetch_weather(self):
         search_input = self.search_bar.text().lower()
         weather = get_weather_by_city(search_input)
@@ -114,14 +117,14 @@ class Mainwindow(QMainWindow):
         box.setStyleSheet('#weatherBox {border: 1px solid #555; border-radius: 15px;}')
         box_layout = QVBoxLayout()
         box.setLayout(box_layout)
-        title = QLabel(title_text)  # ← parameter, not hardcoded
+        title = QLabel(title_text)
         title.setStyleSheet('color:white; font-weight:bold;')
         value = QLabel()
         value.setStyleSheet('color:white; font-size:15px;')
         box_layout.addWidget(title)
         box_layout.addWidget(value)
         box_layout.addStretch()
-        return box, value  # ← hand back both
+        return box, value
 
 
 
